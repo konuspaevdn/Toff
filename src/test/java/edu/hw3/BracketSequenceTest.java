@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
 public class BracketSequenceTest {
     @Test
@@ -27,8 +28,11 @@ public class BracketSequenceTest {
 
     @Test
     @DisplayName("Check incorrect bs")
-    void checkIncorrectBS() throws UnbalancedBSException {
-        String seq1 = "())()";
+    void checkIncorrectBS() {
+        String seq1 = "()())";
+        assertThatThrownBy(() -> BracketSequence.clusterize(seq1)).isInstanceOf(UnbalancedBSException.class);
 
+        String seq2 = "(())(()";
+        assertThatThrownBy(() -> BracketSequence.clusterize(seq2)).isInstanceOf(UnbalancedBSException.class);
     }
 }
