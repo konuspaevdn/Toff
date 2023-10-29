@@ -10,7 +10,7 @@ public class NullCompareTest {
     @Test
     @DisplayName("Check null friendly comparator")
     void checkNullFriendlyComparator() {
-        TreeMap<String, String> tree = new TreeMap<>(new NullFriendlyComparator<String>(String::compareTo));
+        TreeMap<String, String> tree = new TreeMap<>(new NullFriendlyComparator<>(String::compareTo));
         tree.put(null, "test");
         assertThat(tree.containsKey(null)).isTrue();
         tree.put("abc", "Willy");
