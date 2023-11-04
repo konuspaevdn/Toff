@@ -17,23 +17,19 @@ public class Rectangle {
         height = y;
     }
 
-    private double width;
-    private double height;
+    private final double width;
+    private final double height;
 
     public Rectangle setWidth(double width) {
-        this.width = width;
-        return this;
+        return new Rectangle(width, this.height);
     }
 
     public Rectangle setHeight(double height) {
-        this.height = height;
-        return this;
+        return new Rectangle(this.width, height);
     }
 
     public Rectangle setWidthHeight(double width, double height) {
-        this.width = width;
-        this.height = height;
-        return this;
+        return new Rectangle(this.width, this.height);
     }
 
     public final double area() {

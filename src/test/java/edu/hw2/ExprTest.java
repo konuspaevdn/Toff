@@ -27,19 +27,19 @@ public class ExprTest {
         assertThat(d.evaluate()).isEqualTo(8);
         var e = new Exponent(c, b);
         assertThat(e.evaluate()).isEqualTo(-27);
-        var f = new Exponent(9, new Constant(1.5));
+        var f = new Exponent(new Constant(9), new Constant(1.5));
         assertThat(f.evaluate()).isEqualTo(new Constant(27).evaluate());
 
         var g = new Addition(3, 4);
         assertThat(g.evaluate()).isEqualTo(7);
         var h = new Addition(g, a);
         assertThat(h.evaluate()).isEqualTo(10);
-        var i = new Addition(ca, -1);
+        var i = new Addition(ca, new Constant(-1));
         assertThat(i.evaluate()).isEqualTo(4);
 
         var j = new Multiplication(2, 3);
         assertThat(j.evaluate()).isEqualTo(6);
-        var k = new Multiplication(-1, j);
+        var k = new Multiplication(new Constant(-1), j);
         assertThat(k.evaluate()).isEqualTo(-6);
         var l = new Multiplication(g, j);
         assertThat(l.evaluate()).isEqualTo(42);
@@ -53,7 +53,7 @@ public class ExprTest {
         var negOne = new Negate(new Constant(1));
         var sumTwoFour = new Addition(two, four);
         var mult = new Multiplication(sumTwoFour, negOne);
-        var exp = new Exponent(mult, 2);
+        var exp = new Exponent(mult, new Constant(2));
         var res = new Addition(exp, new Constant(1));
         assertThat(res.evaluate()).isEqualTo(37);
     }
