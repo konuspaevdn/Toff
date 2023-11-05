@@ -1,4 +1,11 @@
-#Sat Nov 04 19:14:35 UTC 2023
-/home/donut/Toff/src/main/java/edu/hw4/Animal.java=1699125272858
-/home/donut/Toff/src/main/java/edu/hw4/Main.java=1699123511445
+#Sun Nov 05 17:15:03 UTC 2023
+/home/donut/Toff/src/main/java/edu/hw4/Animal.java=1699133456817
+/home/donut/Toff/src/main/java/edu/hw4/CatBitesError.java=1699201832310
+/home/donut/Toff/src/main/java/edu/hw4/DisproportionError.java=1699202088610
+/home/donut/Toff/src/main/java/edu/hw4/NameWithPunctuationError.java=1699201832294
+/home/donut/Toff/src/main/java/edu/hw4/ValidationError.java=1699201832302
+/home/donut/Toff/src/main/java/edu/hw4/errors/CatBitesError.java=1699204161474
+/home/donut/Toff/src/main/java/edu/hw4/errors/DisproportionError.java=1699204161478
+/home/donut/Toff/src/main/java/edu/hw4/errors/NameWithPunctuationError.java=1699204161454
+/home/donut/Toff/src/main/java/edu/hw4/errors/ValidationError.java=1699204161482
 configuration*?=8B8C51D306770B2EE4838121716657C4C526B71D
