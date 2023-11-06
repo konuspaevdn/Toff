@@ -1,6 +1,5 @@
 package edu.project2;
 
-import edu.project2.Generator.Kruskal.KruskalGenerator;
 import edu.project2.PrettyPrinter.Renderer;
 import edu.project2.Solver.DFS.DFSSolver;
 import edu.project2.structure.Cell;
@@ -19,8 +18,6 @@ public class MazeTest {
     @Test
     @DisplayName("Check if works")
     void generateAndFindAndPrint() {
-        KruskalGenerator kg = new KruskalGenerator();
-
         ArrayList<ArrayList<Cell>> cells = new ArrayList<>(3);
         for (int i = 0; i < 3; ++i) {
             cells.add(new ArrayList<>(4));
@@ -115,20 +112,24 @@ public class MazeTest {
         assertThat(path.get(9)).isEqualTo(new Coordinate(0, 2));
         assertThat(path.get(10)).isEqualTo(new Coordinate(1, 2));
 
-        String mazePrint = "#########\n" +
-                           "#   #   #\n" +
-                           "# # # # #\n" +
-                           "# # # # #\n" +
-                           "### ### #\n" +
-                           "#       #\n" +
-                           "#########\n";
-        String mazeWithPathPrint = "#########\n" +
-                                   "#@@@#@@@#\n" +
-                                   "#@#@#@#@#\n" +
-                                   "#S#@#E#@#\n" +
-                                   "###@###@#\n" +
-                                   "#  @@@@@#\n" +
-                                   "#########\n";
+        String mazePrint = """
+                            #########
+                            #   #   #
+                            # # # # #
+                            # # # # #
+                            ### ### #
+                            #       #
+                            #########
+                            """;
+        String mazeWithPathPrint = """
+                                   #########
+                                   #@@@#@@@#
+                                   #@#@#@#@#
+                                   #S#@#E#@#
+                                   ###@###@#
+                                   #  @@@@@#
+                                   #########
+                                   """;
         assertThat(Renderer.render(maze)).isEqualTo(mazePrint);
         assertThat(Renderer.render(maze, path)).isEqualTo(mazeWithPathPrint);
     }

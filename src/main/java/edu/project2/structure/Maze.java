@@ -17,7 +17,7 @@ public final class Maze {
         }
         grid = new ArrayList<>(height);
         for (int i = 0; i < height; ++i) {
-            grid.add(new ArrayList<Cell>(width));
+            grid.add(new ArrayList<>(width));
             for (int j = 0; j < width; ++j) {
                 Set<Cell.Direction> directions = new HashSet<>();
                 grid.get(i).add(new Cell(i, j, directions));
@@ -45,9 +45,5 @@ public final class Maze {
 
     public ArrayList<Cell.Direction> getDirections(Coordinate coordinate) {
         return new ArrayList<>(grid.get(coordinate.row()).get(coordinate.col()).directions());
-    }
-
-    public Cell getCell(int i, int j) {
-        return grid.get(i).get(j);
     }
 }
