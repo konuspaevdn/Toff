@@ -5,15 +5,15 @@ import java.util.List;
 
 public class Atbash {
     private static final int ALPHABET_SIZE = 26;
-    private static final List<Character> lowerCaseAlphabet = new ArrayList<>(ALPHABET_SIZE);
-    private static final List<Character> upperCaseAlphabet = new ArrayList<>(ALPHABET_SIZE);
+    private static final List<Character> LOWER_CASE_ALPHABET = new ArrayList<>(ALPHABET_SIZE);
+    private static final List<Character> UPPER_CASE_ALPHABET = new ArrayList<>(ALPHABET_SIZE);
 
     static {
         for (char c = 'a'; c <= 'z'; ++c) {
-            lowerCaseAlphabet.add(c);
+            LOWER_CASE_ALPHABET.add(c);
         }
         for (char c = 'A'; c <= 'Z'; ++c) {
-            upperCaseAlphabet.add(c);
+            UPPER_CASE_ALPHABET.add(c);
         }
     }
 
@@ -28,9 +28,9 @@ public class Atbash {
             if (Character.isLetter(c)) {
                 char letter;
                 if (Character.isLowerCase(c)) {
-                    letter = lowerCaseAlphabet.get(ALPHABET_SIZE - lowerCaseAlphabet.indexOf(c) - 1);
+                    letter = LOWER_CASE_ALPHABET.get(ALPHABET_SIZE - LOWER_CASE_ALPHABET.indexOf(c) - 1);
                 } else {
-                    letter = upperCaseAlphabet.get(ALPHABET_SIZE - upperCaseAlphabet.indexOf(c) - 1);
+                    letter = UPPER_CASE_ALPHABET.get(ALPHABET_SIZE - UPPER_CASE_ALPHABET.indexOf(c) - 1);
                 }
                 ciphered.append(letter);
             } else {
