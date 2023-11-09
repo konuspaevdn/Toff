@@ -1,10 +1,11 @@
 package edu.hw3.Task6;
 
 import java.util.PriorityQueue;
+import java.util.Queue;
 
 public class StockMarketQueue implements StockMarket {
 
-    private final PriorityQueue<Stock> queue = new PriorityQueue<>(new StockComparator());
+    private final Queue<Stock> queue = new PriorityQueue<>(new StockComparator());
 
     @Override
     public void add(Stock stock) {

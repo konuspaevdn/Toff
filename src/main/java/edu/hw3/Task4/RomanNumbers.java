@@ -1,16 +1,16 @@
 package edu.hw3.Task4;
 
 import java.util.HashMap;
+import java.util.Map;
 
 @SuppressWarnings("MagicNumber")
 public class RomanNumbers {
-    private static final HashMap<Integer, String> ONES;
-    private static final HashMap<Integer, String> TENS;
-    private static final HashMap<Integer, String> HUNDREDS;
+    private static final Map<Integer, String> ONES = new HashMap<>();
+    private static final Map<Integer, String> TENS = new HashMap<>();
+    private static final Map<Integer, String> HUNDREDS = new HashMap<>();
 
 
     static {
-        ONES = new HashMap<>();
         ONES.put(0, "");
         ONES.put(1, "I");
         ONES.put(2, "II");
@@ -22,7 +22,6 @@ public class RomanNumbers {
         ONES.put(8, "VIII");
         ONES.put(9, "IX");
 
-        TENS = new HashMap<>();
         TENS.put(0, "");
         TENS.put(1, "X");
         TENS.put(2, "XX");
@@ -34,7 +33,6 @@ public class RomanNumbers {
         TENS.put(8, "LXXX");
         TENS.put(9, "XC");
 
-        HUNDREDS = new HashMap<>();
         HUNDREDS.put(0, "");
         HUNDREDS.put(1, "C");
         HUNDREDS.put(2, "CC");

@@ -1,11 +1,12 @@
 package edu.hw3.Task1;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Atbash {
     private static final int ALPHABET_SIZE = 26;
-    private static ArrayList<Character> lowerCaseAlphabet = new ArrayList<>(ALPHABET_SIZE);
-    private static ArrayList<Character> upperCaseAlphabet = new ArrayList<>(ALPHABET_SIZE);
+    private static final List<Character> lowerCaseAlphabet = new ArrayList<>(ALPHABET_SIZE);
+    private static final List<Character> upperCaseAlphabet = new ArrayList<>(ALPHABET_SIZE);
 
     static {
         for (char c = 'a'; c <= 'z'; ++c) {
