@@ -1,4 +1,4 @@
-#Fri Nov 03 16:43:41 UTC 2023
+#Thu Nov 09 19:18:34 UTC 2023
 /home/donut/Toff/src/main/java/edu/hw1/Task1/Addition.java=1697917673226
 /home/donut/Toff/src/main/java/edu/hw1/Task1/Constant.java=1697917585576
 /home/donut/Toff/src/main/java/edu/hw1/Task1/Exponent.java=1697917733306
@@ -6,23 +6,23 @@
 /home/donut/Toff/src/main/java/edu/hw1/Task1/Multiplication.java=1697917733302
 /home/donut/Toff/src/main/java/edu/hw1/Task1/Negate.java=1697917585572
 /home/donut/Toff/src/main/java/edu/hw2/Main.java=1698616304707
-/home/donut/Toff/src/main/java/edu/hw2/Task1/Addition.java=1699029738412
-/home/donut/Toff/src/main/java/edu/hw2/Task1/Constant.java=1698616304707
-/home/donut/Toff/src/main/java/edu/hw2/Task1/Exponent.java=1699029738408
-/home/donut/Toff/src/main/java/edu/hw2/Task1/Expr.java=1698616304707
-/home/donut/Toff/src/main/java/edu/hw2/Task1/Multiplication.java=1699029738416
-/home/donut/Toff/src/main/java/edu/hw2/Task1/Negate.java=1698616304707
-/home/donut/Toff/src/main/java/edu/hw2/Task2/Rectangle.java=1698616304707
-/home/donut/Toff/src/main/java/edu/hw2/Task2/Square.java=1698616304707
-/home/donut/Toff/src/main/java/edu/hw2/Task3/PopularCommandExecutor.java=1698616304707
-/home/donut/Toff/src/main/java/edu/hw2/Task3/connection/Connection.java=1698616304707
-/home/donut/Toff/src/main/java/edu/hw2/Task3/connection/ConnectionException.java=1698616304707
-/home/donut/Toff/src/main/java/edu/hw2/Task3/connection/ConnectionManager.java=1698616304707
-/home/donut/Toff/src/main/java/edu/hw2/Task3/connection/DefaultConnectionManager.java=1698616304707
-/home/donut/Toff/src/main/java/edu/hw2/Task3/connection/FaultyConnection.java=1698616304707
-/home/donut/Toff/src/main/java/edu/hw2/Task3/connection/FaultyConnectionManager.java=1698616304707
-/home/donut/Toff/src/main/java/edu/hw2/Task3/connection/StableConnection.java=1698616304707
-/home/donut/Toff/src/main/java/edu/hw2/Task4/CallingInfo.java=1698616304707
+/home/donut/Toff/src/main/java/edu/hw2/Task1/Addition.java=1699542366786
+/home/donut/Toff/src/main/java/edu/hw2/Task1/Constant.java=1699542366786
+/home/donut/Toff/src/main/java/edu/hw2/Task1/Exponent.java=1699542366786
+/home/donut/Toff/src/main/java/edu/hw2/Task1/Expr.java=1699542366786
+/home/donut/Toff/src/main/java/edu/hw2/Task1/Multiplication.java=1699542366786
+/home/donut/Toff/src/main/java/edu/hw2/Task1/Negate.java=1699542366786
+/home/donut/Toff/src/main/java/edu/hw2/Task2/Rectangle.java=1699551481140
+/home/donut/Toff/src/main/java/edu/hw2/Task2/Square.java=1699551805395
+/home/donut/Toff/src/main/java/edu/hw2/Task3/PopularCommandExecutor.java=1699553244275
+/home/donut/Toff/src/main/java/edu/hw2/Task3/connection/Connection.java=1699542366786
+/home/donut/Toff/src/main/java/edu/hw2/Task3/connection/ConnectionException.java=1699542366786
+/home/donut/Toff/src/main/java/edu/hw2/Task3/connection/ConnectionManager.java=1699553615659
+/home/donut/Toff/src/main/java/edu/hw2/Task3/connection/DefaultConnectionManager.java=1699553615647
+/home/donut/Toff/src/main/java/edu/hw2/Task3/connection/FaultyConnection.java=1699553881661
+/home/donut/Toff/src/main/java/edu/hw2/Task3/connection/FaultyConnectionManager.java=1699553369464
+/home/donut/Toff/src/main/java/edu/hw2/Task3/connection/StableConnection.java=1699553881669
+/home/donut/Toff/src/main/java/edu/hw2/Task4/CallingInfo.java=1699542366786
 /home/donut/Toff/src/main/java/edu/hw3/Main.java=1698601652017
 /home/donut/Toff/src/main/java/edu/hw3/Task2/UnbalancedBSException.java=1698589965895
 /home/donut/Toff/src/main/java/edu/hw3/Task5/NameComparatorAsc.java=1698599476390

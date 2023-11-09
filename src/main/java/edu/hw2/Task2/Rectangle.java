@@ -29,7 +29,7 @@ public class Rectangle {
     }
 
     public Rectangle setWidthHeight(double width, double height) {
-        return new Rectangle(this.width, this.height);
+        return new Rectangle(width, height);
     }
 
     public final double area() {

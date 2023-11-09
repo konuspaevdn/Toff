@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="9.3">
 <file name="/home/donut/Toff/src/main/java/edu/hw2/Task4/Trace.java">
-<error line="6" column="1" severity="warning" message="Private ctor in non-final class. Inspect the code and make sure its intended." source="com.puppycrawl.tools.checkstyle.checks.design.FinalClassCheck"/>
-</file>
-<file name="/home/donut/Toff/src/main/java/edu/hw2/Task1/Addition.java">
-</file>
-<file name="/home/donut/Toff/src/main/java/edu/hw2/Task1/Multiplication.java">
-</file>
-<file name="/home/donut/Toff/src/main/java/edu/hw2/Task1/Exponent.java">
+<error line="3" column="1" severity="warning" message="Private ctor in non-final class. Inspect the code and make sure its intended." source="com.puppycrawl.tools.checkstyle.checks.design.FinalClassCheck"/>
 </file>
 </checkstyle>

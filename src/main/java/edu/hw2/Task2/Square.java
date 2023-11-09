@@ -13,19 +13,7 @@ public class Square extends Rectangle {
 
     private final double side;
 
-    @Override
-    public Rectangle setWidth(double width) {
-        return new Rectangle(width, side);
+    public Square setSide(double side) {
+        return new Square(side);
     }
-
-    @Override
-    public Rectangle setHeight(double height) {
-        return new Rectangle(side, height);
-    }
-
-    @Override
-    public Rectangle setWidthHeight(double width, double height) {
-        return new Rectangle(width, height);
-    }
-
 }

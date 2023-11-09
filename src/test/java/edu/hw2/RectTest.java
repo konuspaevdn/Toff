@@ -23,13 +23,14 @@ public class RectTest {
     @DisplayName("Area calculation")
     @MethodSource("rectangles")
     void rectangleArea(Rectangle rect) {
-        rect = rect.setWidthHeight(20, 10);
+        rect = rect.setWidth(20);
+        rect = rect.setHeight(10);
         assertThat(rect.area()).isEqualTo(200.0);
 
         rect = rect.setWidth(10);
         assertThat(rect.area()).isEqualTo(100);
 
-        rect = rect.setHeight(30);
+        rect = rect.setWidthHeight(30, 10);
         assertThat(rect.area()).isEqualTo(300);
     }
 }
