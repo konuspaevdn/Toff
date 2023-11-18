@@ -4,7 +4,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -180,17 +179,14 @@ public class ZooKeeperTest {
     @Test
     @DisplayName("Find heaviest fish among sets of animals")
     void findSupremeFishTest() {
-        ArrayList<Collection<Animal>> zoos = new ArrayList<>();
-        zoos.add(animals);
-        assertThat(ZooKeeper.findSupremeFish(zoos).orElseThrow().name()).isEqualTo("Ichthys!");
+        assertThat(ZooKeeper.findSupremeFish(animals).orElseThrow().name()).isEqualTo("Ichthys!");
 
-        ArrayList<Animal> animals2 = new ArrayList<>();
+        List<Animal> animals2 = new ArrayList<>();
         animals2.add(new Animal("Maxwell", Animal.Type.CAT, Animal.Sex.M, 42, 10, 5, true));
         animals2.add(new Animal("Fishie", Animal.Type.FISH, Animal.Sex.F, 3, 4, 1, false));
-        zoos.add(animals2);
-        assertThat(ZooKeeper.findSupremeFish(zoos).orElseThrow().name()).isEqualTo("Ichthys!");
+        assertThat(ZooKeeper.findSupremeFish(animals, animals2).orElseThrow().name()).isEqualTo("Ichthys!");
         animals2.add(new Animal("Bhark", Animal.Type.FISH, Animal.Sex.M, 6, 35, 28, true));
-        assertThat(ZooKeeper.findSupremeFish(zoos).orElseThrow().name()).isEqualTo("Bhark");
+        assertThat(ZooKeeper.findSupremeFish(animals, animals2).orElseThrow().name()).isEqualTo("Bhark");
     }
 
     @Test

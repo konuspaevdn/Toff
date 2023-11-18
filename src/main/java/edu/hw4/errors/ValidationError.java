@@ -2,24 +2,29 @@ package edu.hw4.errors;
 
 import edu.hw4.Animal;
 
-public abstract class ValidationError {
-    String msg = "";
-    String fields = "";
+public class ValidationError {
+    protected String msg;
+    protected String fields;
 
-    protected void setMsg(String str) {
-        msg = str;
+    public String getMsg() {
+        return msg;
     }
 
-    protected void setFields(String str) {
-        fields = str;
+    protected void setMsg(String msg) {
+        this.msg = msg;
     }
 
     public String getFields() {
         return fields;
     }
 
-    public abstract Boolean check(Animal animal);
+    protected void setFields(String fields) {
+        this.fields = fields;
+    }
 
+    public Boolean check(Animal animal) {
+        return false;
+    }
 }
 
 
