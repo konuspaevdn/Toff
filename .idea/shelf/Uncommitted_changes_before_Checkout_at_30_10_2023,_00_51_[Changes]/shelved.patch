@@ -1,0 +1,94 @@
+Index: src/main/java/edu/hw1/EvenArrayUtils.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package edu.hw1;\n\nimport java.util.Objects;\nimport org.apache.logging.log4j.LogManager;\nimport org.apache.logging.log4j.Logger;\n\npublic final class EvenArrayUtils {\n    private final static Logger LOGGER = LogManager.getLogger();\n\n    private EvenArrayUtils() {\n    }\n\n    /**\n     * Filters an array of integers, returning only the even numbers.\n     *\n     * @param numbers the array of integers to filter\n     * @return an array of even integers from the original array\n     * @throws NullPointerException if the input array is null\n     */\n    public static int[] filter(int[] numbers) {\n        Objects.requireNonNull(numbers);\n        LOGGER.trace(\"Filtering an array {}\", numbers);\n\n        int count = count(numbers);\n\n        int[] result = new int[count];\n        int idx = 0;\n        for (int number : numbers) {\n            if (number % 2 == 0) {\n                result[idx++] = number;\n            }\n        }\n        return result;\n    }\n\n    /**\n     * Counts the number of even integers in an array of integers.\n     *\n     * @param numbers the array of integers to count\n     * @return the number of even integers in the array\n     * @throws NullPointerException if the input array is null\n     */\n    public static int count(int[] numbers) {\n        Objects.requireNonNull(numbers);\n\n        int count = 0;\n        for (int number : numbers) {\n            if (number % 2 == 0) {\n                ++count;\n            }\n        }\n        return count;\n    }\n}\n
+===================================================================
+diff --git a/src/main/java/edu/hw1/EvenArrayUtils.java b/src/main/java/edu/hw1/EvenArrayUtils.java
+--- a/src/main/java/edu/hw1/EvenArrayUtils.java	
++++ b/src/main/java/edu/hw1/EvenArrayUtils.java	
+@@ -1,54 +1,0 @@
+-package edu.hw1;
+-
+-import java.util.Objects;
+-import org.apache.logging.log4j.LogManager;
+-import org.apache.logging.log4j.Logger;
+-
+-public final class EvenArrayUtils {
+-    private final static Logger LOGGER = LogManager.getLogger();
+-
+-    private EvenArrayUtils() {
+-    }
+-
+-    /**
+-     * Filters an array of integers, returning only the even numbers.
+-     *
+-     * @param numbers the array of integers to filter
+-     * @return an array of even integers from the original array
+-     * @throws NullPointerException if the input array is null
+-     */
+-    public static int[] filter(int[] numbers) {
+-        Objects.requireNonNull(numbers);
+-        LOGGER.trace("Filtering an array {}", numbers);
+-
+-        int count = count(numbers);
+-
+-        int[] result = new int[count];
+-        int idx = 0;
+-        for (int number : numbers) {
+-            if (number % 2 == 0) {
+-                result[idx++] = number;
+-            }
+-        }
+-        return result;
+-    }
+-
+-    /**
+-     * Counts the number of even integers in an array of integers.
+-     *
+-     * @param numbers the array of integers to count
+-     * @return the number of even integers in the array
+-     * @throws NullPointerException if the input array is null
+-     */
+-    public static int count(int[] numbers) {
+-        Objects.requireNonNull(numbers);
+-
+-        int count = 0;
+-        for (int number : numbers) {
+-            if (number % 2 == 0) {
+-                ++count;
+-            }
+-        }
+-        return count;
+-    }
+-}
+Index: src/test/java/edu/hw1/SampleTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package edu.hw1;\n\nimport org.junit.jupiter.api.DisplayName;\nimport org.junit.jupiter.api.Test;\nimport static org.assertj.core.api.AssertionsForClassTypes.assertThat;\n\npublic class SampleTest {\n    @Test\n    @DisplayName(\"Фильтрация четных чисел\")\n    void filterEvenNumbers() {\n        // given\n        int[] numbers = new int[] {1, 2, 3, 4, 5};\n\n        // when\n        int[] evenNumbers = EvenArrayUtils.filter(numbers);\n\n        // then\n        assertThat(evenNumbers)\n            .containsExactly(2, 4)\n            .hasSize(2);\n    }\n}\n
+===================================================================
+diff --git a/src/test/java/edu/hw1/SampleTest.java b/src/test/java/edu/hw1/SampleTest.java
+--- a/src/test/java/edu/hw1/SampleTest.java	
++++ b/src/test/java/edu/hw1/SampleTest.java	
+@@ -1,22 +1,0 @@
+-package edu.hw1;
+-
+-import org.junit.jupiter.api.DisplayName;
+-import org.junit.jupiter.api.Test;
+-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+-
+-public class SampleTest {
+-    @Test
+-    @DisplayName("Фильтрация четных чисел")
+-    void filterEvenNumbers() {
+-        // given
+-        int[] numbers = new int[] {1, 2, 3, 4, 5};
+-
+-        // when
+-        int[] evenNumbers = EvenArrayUtils.filter(numbers);
+-
+-        // then
+-        assertThat(evenNumbers)
+-            .containsExactly(2, 4)
+-            .hasSize(2);
+-    }
+-}
